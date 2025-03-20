@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Journal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="tracker-box">
+            <!-- Dark Mode Toggle -->
+            <div class="toggle-mode">
+                <button id="mode-switch">🌙 Switch Mode</button>
+            </div>
+
+            <h1>How's Your Mood?</h1>
+            
+            <!-- Mood Form -->
+            <div class="mood-input">
+                <label for="mood">Your Mood Today:</label>
+                <select id="mood">
+                    <option value="joyful">😊 Joyful</option>
+                    <option value="down">😢 Down</option>
+                    <option value="frustrated">😠 Frustrated</option>
+                    <option value="calm">😐 Calm</option>
+                    <option value="thrilled">🤩 Thrilled</option>
+                </select>
+
+                <label for="description">Your Thoughts:</label>
+                <textarea id="description" rows="3" placeholder="Share a thought..."></textarea>
+                
+                <button id="save-mood">Save Entry</button>
+                <p id="status"></p>
+            </div>
+
+            <!-- View Mood History -->
+            <button id="history-btn">View History</button>
+
+            <!-- Mood Log -->
+            <div class="history-section" id="history">
+                <h2>Past Entries</h2>
+                <table id="history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Mood</th>
+                            <th>Notes</th>
+                            <th>Options</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
